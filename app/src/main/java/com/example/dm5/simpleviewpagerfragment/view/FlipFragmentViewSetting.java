@@ -52,6 +52,10 @@ public class FlipFragmentViewSetting implements BaseViewSetting{
         this.bgLineColor = bgLineColor;
     }
     
+    public int getCurrentPage() {
+        return currentPage;
+    }
+    
     public void setCurrentPage(int currentPage) {
         this.currentPage = currentPage;
     }
