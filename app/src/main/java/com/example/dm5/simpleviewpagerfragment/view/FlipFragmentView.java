@@ -115,6 +115,9 @@ public class FlipFragmentView extends BaseView implements ViewPager.OnPageChange
             vp.setAdapter(new MyFragmentPagerAdapter(
                 ((FragmentActivity)mContext).getSupportFragmentManager(), setting.getFragments()));
         }
+         if(setting.getCurrentPage() > 0 && setting.getCurrentPage() < setting.getTitles().size()){
+            vp.setCurrentItem(setting.getCurrentPage());
+        }
     }
 
     private boolean checkSetting(){
