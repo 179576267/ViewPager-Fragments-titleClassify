@@ -13,7 +13,8 @@ public class FlipFragmentViewSetting implements BaseViewSetting{
     private int titleUnCheckTextColor = 0xFF000000;
     private int titleCheckTextColor = 0xFF2092E3;
     private int bgLineColor = 0xFF017DD7;
-
+    private int currentPage = 0;
+    
     public FlipFragmentViewSetting() {
         titles = new ArrayList<>();
         fragments = new ArrayList<>();
@@ -50,7 +51,11 @@ public class FlipFragmentViewSetting implements BaseViewSetting{
     public void setBgLineColor(int bgLineColor) {
         this.bgLineColor = bgLineColor;
     }
-
+    
+    public void setCurrentPage(int currentPage) {
+        this.currentPage = currentPage;
+    }
+    
     public void addPage(String title, Fragment fragment){
         if(!TextUtils.isEmpty(title) && fragment != null){
             titles.add(title);
